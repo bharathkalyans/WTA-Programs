@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sample Page</title>
+    </head>
+    <body>s
+        <p>To get Date click below Button</p>
+        <p id="demo"></p>
+        <button id="mybtn" >Click me </button>
+        
+        <script type="text/javascript">
+            var s = document.getElementById("paragraph")
+            s.style.backgroundColor = "pink"
+
+            var btn = document.getElementById("mybtn")
+            btn.onclick(getDate);
+
+
+            function getDate() {
+                 document.getElementById("demo").innerHTML = Date().toString()
+            }
+        </script>
+    </body>
+</html>
