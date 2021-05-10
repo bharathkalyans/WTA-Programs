@@ -6,9 +6,32 @@
 </head>
 <body>
     <h2>Program 3</h2>
-    <p>Write a JavaScript Code that displays text Growing with increasing font size in red color
-        when the font size reaches 50pt it will display text in Blue Colour and the foint size decrease to 5 pt!
-    </p>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
+   <p id="demo"></p>
+    <script type="text/javascript">
+        var v1 = setInterval(inTimer,100);
+        var size = 5;
+        var ids = document.getElementById("demo");
+
+        function inTimer(){
+            ids.innerHTML = "TEXT GROWING"
+            ids.setAttribute('style',"font-size:"+size+" px; color:red");
+            size = size + 5;
+            if(size>=50){
+                clearInterval(v1);
+                v2 = setInterval(deTimer,100);
+            }
+        }
+
+        function deTimer(){
+            ids.innerHTML = "TEXT SHRINKING"
+            ids.setAttribute('style',"font-size:"+size+" px; color:blue");
+            size = size - 5;
+            if(size == 0){
+                clearInterval(v2);
+                
+            }
+        }
+    </script>
+
 </body>
 </html>
