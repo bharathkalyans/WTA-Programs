@@ -3,22 +3,34 @@
     <head>
         <title>Sample Page</title>
     </head>
-    <body>s
-        <p>To get Date click below Button</p>
-        <p id="demo"></p>
-        <button id="mybtn" >Click me </button>
+    <body>
+        <p id="myBar"></p>
         
         <script type="text/javascript">
-            var s = document.getElementById("paragraph")
-            s.style.backgroundColor = "pink"
-
-            var btn = document.getElementById("mybtn")
-            btn.onclick(getDate);
-
-
-            function getDate() {
-                 document.getElementById("demo").innerHTML = Date().toString()
+        move();
+        function move() {
+            var elem = document.getElementById("myBar"); 
+            var width = 0;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width == 100) {
+                clearInterval(id);
+                } else {
+                width++; 
+                elem.style.width = width + '%'; 
+                }
             }
+        }
+            // var s = document.getElementById("paragraph")
+            // s.style.backgroundColor = "pink"
+
+            // var btn = document.getElementById("mybtn")
+            // btn.onclick(getDate);
+
+
+            // function getDate() {
+            //      document.getElementById("demo").innerHTML = Date().toString()
+            // }
         </script>
     </body>
 </html>

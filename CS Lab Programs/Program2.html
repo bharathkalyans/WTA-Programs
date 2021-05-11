@@ -3,7 +3,7 @@
     <head>
         <title>Program 2</title>
     </head>
-    <body>
+    <body bgcolor="grey">
 
         <table border="1" align="center" width ="70%">
             <tr>
@@ -13,8 +13,9 @@
             </tr>
             <script>
     
-
-                 for (let index = 0; index <= 10 ; index++) {
+                var n = prompt("Enter a Number").toString();
+                var m = parseInt(n);
+                 for (let index = 0; index <= m ; index++) {
                     document.write ("<tr align=\"center\"><td>" + index + "</td><td>"+ index * index
                         +"</td><td>"+ index * index * index +"</td></tr>");               
                 }
