@@ -7,19 +7,16 @@
 <body>
     <h2>Program 3</h2>
    <p id="demo"></p>
-   <p id="demotwo"></p>
     <script type="text/javascript">
+
         var v1 = setInterval(inTimer,500);
-    
         var size = 5;
         var ids = document.getElementById("demo");
-  
-
 
      
         function inTimer(){
             ids.innerHTML = "TEXT GROWING"
-            ids.setAttribute('style',"font-size:"+size+" px; color:red");
+            ids.setAttribute('style',"font-size:"+size+"px; color:red");
             size = size + 5;
             if(size>=50){
                 clearInterval(v1);
@@ -29,10 +26,11 @@
 
         function deTimer(){
             ids.innerHTML = "TEXT SHRINKING"
-            ids.setAttribute('style',"font-size:"+size+" px; color:blue");
+            ids.setAttribute('style',"font-size:"+size+"px; color:blue");
             size = size - 5;
             if(size == 5){
                 clearInterval(v2);
+                
             }
         }
     </script>
