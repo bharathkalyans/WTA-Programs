@@ -9,7 +9,7 @@
    <p id="demo"></p>
     <script type="text/javascript">
 
-        var v1 = setInterval(inTimer,500);
+        var v1 = setInterval(inTimer,1500);
         var size = 5;
         var ids = document.getElementById("demo");
 
@@ -20,7 +20,7 @@
             size = size + 5;
             if(size>=50){
                 clearInterval(v1);
-                v2 = setInterval(deTimer,500);
+                v2 = setInterval(deTimer,1500);
             }
         }
 
@@ -29,7 +29,7 @@
             ids.setAttribute('style',"font-size:"+size+"px; color:blue");
             size = size - 5;
             if(size == 5){
-                
+                clearInterval(v2);
                 
             }
         }
