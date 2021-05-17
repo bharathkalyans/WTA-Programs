@@ -6,7 +6,7 @@
             var v1 = parseFloat(document.getElementById("ip1").value);
             var v2 = parseFloat(document.getElementById("ip2").value);
             if (isNaN(v1) || isNaN(v2))
-                alert("enter a valid number");
+                alert("Please enter a valid number ! 😃");
             else if (click_id == "add")
                 document.getElementById("output").value = v1 + v2;
             else if (click_id == "sub")
@@ -18,32 +18,33 @@
 
         }
     </script>
+    <style>
+        body{
+            background-color:rgb(94, 238, 75);
+            font-size: larger;
+        }
+    </style>
 </head>
 
 <body>
     <center>
-        <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> A SIMPLE CALCULATOR </h1>
-        <table style="background-color:rgb(94, 238, 75)" align=="center">
-            <tr>
-                <td>
-                    <form method="get" action="">
+        <h1 style="font-family: 'Lucida Sans', sans-serif;"> A SIMPLE CALCULATOR </h1>
+                    <form method="get" action="" >
                         <div width=50% align="center">
-                            <label>OP1<input type="text" id="ip1" /></label>
-                            <label>OP2<input type="text" id="ip2" /></label>
-                            <lablel>Result<input type="text" id="output" /></label>
+                            <label>Input 1 :: <input type="text" id="ip1" /></label>
+                            <label>Input 2 :: <input type="text" id="ip2" /></label>
+                            <lablel>  Result  <input type="text" id="output" /></label>
                         </div>
-                        <br>
+                        <hr width="60%">
+                        <p>Choose the Desired Operation!</p>
                         <div width=50% align="center">
-                            <input type="button" value="+" id="add" onclick="call(this.id)" />
+                            <input type="button" value="+" id="add" onclick="call(this.id)"  />
                             <input type="button" value="-" id="sub" onclick="call(this.id)" />
                             <input type="button" value="*" id="mul" onclick="call(this.id)" />
                             <input type="button" value="/" id="div" onclick="call(this.id)" />
                             <input type="reset" value="clear" />
                         </div>
                     </form>
-                </td>
-            </tr>
-        </table>
     </center>
 </body>
 
